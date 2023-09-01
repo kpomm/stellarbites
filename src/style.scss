@@ -1,7 +1,8 @@
 @import url('https://fonts.cdnfonts.com/css/fredoka-one');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 body, html {
-    font-family: 'Fredoka One', sans-serif;
+    font-family: 'Fredoka One', 'Raleway', sans-serif;
     color: #FFFBDB;
     background-color: #322E60;
     height: 100%;
@@ -28,6 +29,11 @@ body, html {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+  }
+
+  h2 {
+    margin: 0px;
+    font-size: 1.3rem;
   }
 
   #top-bar {
@@ -64,8 +70,13 @@ body, html {
     margin-bottom: 5%;
   }
 
-  #search-bar > input {
-    margin: auto;
+  #nested-search-bar {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+  }
+
+  #search-bar input {
     width: 43.5rem;
     height: 5rem;
     flex-shrink: 0;
@@ -80,26 +91,79 @@ body, html {
     font-weight: 400;
     line-height: normal;
 
-    padding-left: 2%;
-    padding-right: 2%;
+    padding-left: 4%;
+    padding-right: 4%;
 
     :focus {
       border-color: #322E60;
     }
   }
 
+  #search-bar button {
+    margin-left: 1%;
+    height: 5rem;
+    width: 5rem;
+    flex-shrink: 0;
+    border-radius: 3.125rem;
+    border-style: none;
+    background: #FFFBDB;
+  }
+
   #recipe-list {
     margin-left: 2%;
     margin-right: 2%;
+    padding: 0px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
   }
 
   .recipe-item {
     width: 25.3125rem;
     height: 23.9375rem;
     flex-shrink: 0;
+    overflow: hidden;
+    margin: 2%;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.15s;
+    border-radius: 3.125rem;
+
+  }
+
+  .recipe-item:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0px 5px 10px 0px #322f52;
+  }
+
+  .recipe-picture {
+    height: 18.125rem;
+    width: 100%;
+    overflow: hidden;
+    // border-radius: 3.125rem 3.125rem 0rem 0rem;
+
+  }
+
+  .recipe-picture > img {
+    min-width: 100%;
+  }
+
+  .recipe-label {
+    width: 25.3125rem;
+    height: 5.8125rem;
+    flex-shrink: 0;
+    // border-radius: 0rem 0rem 3.125rem 3.125rem;
+    background: #4F4A81;
+    z-index: -1;
+  }
+
+  .recipe-text-wrapper {
+    padding: 5%;
+  }
+
+  .recipe-text-wrapper > p {
+    margin-top: 1%;
+    font-family: 'Raleway';
+    font-weight: 200;
   }
 

@@ -1,16 +1,18 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
+import debounce from 'lodash.debounce';
 import recipeSearch from '../services/spoonacular-api';
 
 // import components
 import SearchBar from './SearchBar';
 import RecipeList from './RecipeList';
 import TopBar from './TopBar';
+import RecipeDetail from './RecipeDetail';
 
 function App(props) {
   const [recipes, setRecipes] = useState([]);
   // eslint-disable-next-line no-unused-vars
-  const [selectedRecipe, setSelected] = useState(null);
+  const [selectedRecipe, setSelected] = useState();
 
   const search = (text) => {
     recipeSearch(text).then((result) => {
@@ -20,15 +22,23 @@ function App(props) {
     });
   };
 
+  // import to be used in your App component
+
+  // create a new debounced search function
+  const debouncedSearch = useCallback(debounce(search, 500), []);
+
+  console.log(selectedRecipe);
+
   useEffect(() => {
-    search('apples,flour,sugar');
+    search('chicken,flour,eggs');
   }, []);
 
   return (
     <div>
       <TopBar />
-      <SearchBar />
-      <RecipeList recipes={recipes} />
+      <SearchBar onSearchChange={debouncedSearch} />
+      <RecipeDetail recipe={selectedRecipe} />
+      <RecipeList onRecipeSelect={(selection) => setSelected(selection)} recipes={recipes} />
     </div>
   );
 }
