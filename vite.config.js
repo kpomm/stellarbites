@@ -6,6 +6,7 @@ import vitePluginFaviconsInject from 'vite-plugin-favicons-inject';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/',
   plugins: [
     eslint(),
     vitePluginFaviconsInject('./img/stellarbitesLogo.svg'),
