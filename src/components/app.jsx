@@ -37,8 +37,10 @@ function App(props) {
     <div>
       <TopBar />
       <SearchBar onSearchChange={debouncedSearch} />
-      <RecipeDetail recipe={selectedRecipe} />
-      <RecipeList onRecipeSelect={(selection) => setSelected(selection)} recipes={recipes} />
+      <div id="landing-container">
+        <RecipeDetail recipe={selectedRecipe} />
+        <RecipeList onRecipeSelect={(selection) => setSelected(selection)} recipes={recipes} />
+      </div>
     </div>
   );
 }

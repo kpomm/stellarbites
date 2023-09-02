@@ -7,9 +7,6 @@ function TopBar() {
         <img src="../img/stellarbitesLogo.svg" alt="" />
         <h1>StellarBites</h1>
       </div>
-      <div className="right-side">
-        <h1>saved</h1>
-      </div>
     </div>
   );
 }

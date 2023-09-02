@@ -21,7 +21,7 @@ function SearchBar(props) {
     <div id="search-bar">
       <div id="nested-search-bar">
         <input onChange={onInputChange} value={searchterm} placeholder="type your ingredients, separated by commas" />
-        <button onClick={onButtonPress} type="submit"><BiSearchAlt size="50px" color="#322E60" /></button>
+        <button onClick={onButtonPress} type="submit"><BiSearchAlt size="30px" color="#322E60" /></button>
       </div>
     </div>
   );

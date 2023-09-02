@@ -1,10 +1,9 @@
-@import url('https://fonts.cdnfonts.com/css/fredoka-one');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body, html {
-    font-family: 'Fredoka One', 'Raleway', sans-serif;
+    font-family: 'Rubik', sans-serif;
     color: #FFFBDB;
-    background-color: #322E60;
+    background-color: #65618f;
     height: 100%;
     padding: 0;
     margin: auto;
@@ -12,8 +11,8 @@ body, html {
 
   .logo {
     background-image: url('img/stellarbitesLogo.svg');
-    width: 100px;
-    height: 100px;
+    width: 20px;
+    height: 20px;
     background-repeat: no-repeat;
     background-size: contain;
   }
@@ -24,25 +23,26 @@ body, html {
 
   h1 {
     color: #FFFBDB;
-    font-family: Fredoka One;
-    font-size: 1.75rem;
+    font-family: 'Rubik';
+    font-size: 1.5rem;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 900;
     line-height: normal;
   }
 
   h2 {
     margin: 0px;
     font-size: 1.3rem;
+    font-weight: 500;
   }
 
   #top-bar {
     width: 90vw;
-    height: 10vh;
+    height: 5vh;
     padding: 5%;
-    padding-top: 1%;
+    padding-top: 0%;
     padding-bottom: 1%;
-    background-color: #322E60;
+    background-color: #65618f;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -56,8 +56,8 @@ body, html {
   }
 
   #top-bar > div > img {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     margin-top: 4%;
     margin-right: 3%;
   }
@@ -78,14 +78,14 @@ body, html {
 
   #search-bar input {
     width: 43.5rem;
-    height: 5rem;
+    height: 3rem;
     flex-shrink: 0;
     border-radius: 3.125rem;
     border-style: none;
-    background: #716DA0;
+    background: #9894c4;
 
     color: #322E60;
-    font-family: Fredoka One;
+    font-family: 'Rubik';
     font-size: 1.25rem;
     font-style: normal;
     font-weight: 400;
@@ -101,20 +101,34 @@ body, html {
 
   #search-bar button {
     margin-left: 1%;
-    height: 5rem;
-    width: 5rem;
+    height: 3rem;
+    width: 3rem;
     flex-shrink: 0;
     border-radius: 3.125rem;
     border-style: none;
     background: #FFFBDB;
   }
 
+  #landing-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding: 3%;
+    padding-top: 0;
+  }
+
+  .fixed-element {
+    position: fixed;
+    left: 5%;
+  }
+
   #recipe-list {
     margin-left: 2%;
     margin-right: 2%;
+    margin-top: 0;
     padding: 0px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
@@ -123,11 +137,12 @@ body, html {
     width: 25.3125rem;
     height: 23.9375rem;
     flex-shrink: 0;
+    margin: 5%;
+    margin-top: 0%;
     overflow: hidden;
-    margin: 2%;
     transition-timing-function: ease-in-out;
     transition-duration: 0.15s;
-    border-radius: 3.125rem;
+    border-radius: 1.125rem;
 
   }
 
@@ -150,7 +165,7 @@ body, html {
 
   .recipe-label {
     width: 25.3125rem;
-    height: 5.8125rem;
+    height: 7.8125rem;
     flex-shrink: 0;
     // border-radius: 0rem 0rem 3.125rem 3.125rem;
     background: #4F4A81;
@@ -166,4 +181,17 @@ body, html {
     font-family: 'Raleway';
     font-weight: 200;
   }
+
+  #recipe-detail {
+    width:50%;
+    height: 50vh;
+    background-color: #322E60;
+    padding: 3%;
+
+    img {
+      width: 50%;
+    }
+  }
+
+
 
