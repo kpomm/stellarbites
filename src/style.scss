@@ -85,7 +85,6 @@ body, html {
 
   #search-bar input {
     width: 43.5rem;
-    height: 3rem;
     flex-shrink: 0;
     border-radius: 10px;
     border: solid 2px $accent-color;
@@ -93,7 +92,7 @@ body, html {
 
     color: #322E60;
     font-family: 'Nunito', sans-serif;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -111,9 +110,13 @@ body, html {
     height: 3rem;
     width: 3rem;
     flex-shrink: 0;
-    border-radius: 3.125rem;
-    border-style: none;
-    background: #FFFBDB;
+    border-radius: 10px;
+    border: solid 2px $accent-color;
+    background: $white-color;
+  }
+
+  #search-bar button :hover {
+    background: $accent-color;
   }
 
   #landing-container {
@@ -191,6 +194,7 @@ body, html {
   }
 
   #recipe-detail {
+    color: $white-color;
     width:55%;
     height: 50vh;
     background-color: $accent-color;
