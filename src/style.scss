@@ -1,12 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+$accent-color: #65618f;
+$white-color: #E0DFF1;
 
 body, html {
-    font-family: 'Rubik', sans-serif;
-    color: #FFFBDB;
-    background-color: #65618f;
+    font-family: 'Nunito', sans-serif;
+    color: $accent-color;
+    background-color: $white-color;
     height: 100%;
     padding: 0;
-    margin: auto;
+    margin: 0;
   }
 
   .logo {
@@ -22,8 +25,8 @@ body, html {
   }
 
   h1 {
-    color: #FFFBDB;
-    font-family: 'Rubik';
+    color: $white-color;
+    font-family: 'Nunito', sans-serif;
     font-size: 1.5rem;
     font-style: normal;
     font-weight: 900;
@@ -37,12 +40,13 @@ body, html {
   }
 
   #top-bar {
-    width: 90vw;
-    height: 5vh;
-    padding: 5%;
-    padding-top: 0%;
-    padding-bottom: 1%;
+    width: 100%;
+    height: 7vh;
+    padding: 1%;
     background-color: #65618f;
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -53,16 +57,19 @@ body, html {
   #top-bar > .left-side {
     display: flex;
     flex-direction: row;
+    align-items: center;
   }
 
   #top-bar > div > img {
     width: 40px;
     height: 40px;
-    margin-top: 4%;
     margin-right: 3%;
   }
 
   #search-bar {
+    position: fixed;
+    top: 10vh;
+    left: 5%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -80,12 +87,12 @@ body, html {
     width: 43.5rem;
     height: 3rem;
     flex-shrink: 0;
-    border-radius: 3.125rem;
-    border-style: none;
-    background: #9894c4;
+    border-radius: 10px;
+    border: solid 2px $accent-color;
+    background: $white-color;
 
     color: #322E60;
-    font-family: 'Rubik';
+    font-family: 'Nunito', sans-serif;
     font-size: 1.25rem;
     font-style: normal;
     font-weight: 400;
@@ -110,6 +117,7 @@ body, html {
   }
 
   #landing-container {
+    margin-top: 25vh;
     display: flex;
     flex-direction: row;
     justify-content: end;
@@ -123,6 +131,7 @@ body, html {
   }
 
   #recipe-list {
+    width: 25%;
     margin-left: 2%;
     margin-right: 2%;
     margin-top: 0;
@@ -134,25 +143,25 @@ body, html {
   }
 
   .recipe-item {
-    width: 25.3125rem;
-    height: 23.9375rem;
+    width: 100%;
+    height: 43vh;
     flex-shrink: 0;
-    margin: 5%;
     margin-top: 0%;
+    margin-bottom: 5%;
     overflow: hidden;
     transition-timing-function: ease-in-out;
-    transition-duration: 0.15s;
-    border-radius: 1.125rem;
+    transition-duration: 0.1s;
+    border-radius: 10px;
 
   }
 
   .recipe-item:hover {
-    transform: translateY(-0.5rem);
-    box-shadow: 0px 5px 10px 0px #322f52;
+    transform: translateY(-0.3rem);
+    box-shadow: 0px 2px 5px 0px #322f52;
   }
 
   .recipe-picture {
-    height: 18.125rem;
+    height: 28vh;
     width: 100%;
     overflow: hidden;
     // border-radius: 3.125rem 3.125rem 0rem 0rem;
@@ -164,11 +173,10 @@ body, html {
   }
 
   .recipe-label {
-    width: 25.3125rem;
-    height: 7.8125rem;
+    width: 100%;
+    height: 15vh;
     flex-shrink: 0;
     // border-radius: 0rem 0rem 3.125rem 3.125rem;
-    background: #4F4A81;
     z-index: -1;
   }
 
@@ -183,10 +191,11 @@ body, html {
   }
 
   #recipe-detail {
-    width:50%;
+    width:55%;
     height: 50vh;
-    background-color: #322E60;
+    background-color: $accent-color;
     padding: 3%;
+    border-radius: 10px;
 
     img {
       width: 50%;

@@ -16,9 +16,9 @@ function RecipeDetail({ recipe }) {
 
   return (
     <div id="recipe-detail" className="fixed-element">
+      <div><h1>{recipe.title}</h1></div>
       <img src={recipe.image} alt="" />
       <div className="details">
-        <div>{recipe.title}</div>
         <div>Missing Ingredients: {missingIngredients}</div>
       </div>
     </div>
