@@ -68,7 +68,7 @@ function RecipeDetail({ recipe, marketsPromise }) {
           </div>
         </div>
         <div className="details-right">
-          {markets && (<div><h4>Shop Local!</h4><div className="markets">{displayMarkets}</div></div>)}
+          {markets && (<div><h3>Shop Local!</h3><div className="markets">{displayMarkets}</div></div>)}
         </div>
       </div>
 
