@@ -9,10 +9,15 @@ There is additional functionality with Farmer's Market New York API, where I can
 ## Components 
 
 Main App
+
 Top bar 
+
 Search bar
+
 Recipe List
+
 Recipe List Item 
+
 Recipe Detail 
 
 ## Specs
