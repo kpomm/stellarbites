@@ -85,10 +85,13 @@ function App(props) {
   return (
     <div>
       <TopBar />
-      <SearchBar onSearchChange={debouncedSearch} />
-      <SeasonDropdown selected={selectedSeason}
-        onChange={handleSeasonSelect}
-      />
+      <div id="header-stuff">
+        <SearchBar onSearchChange={debouncedSearch} />
+        <SeasonDropdown selected={selectedSeason}
+          onChange={handleSeasonSelect}
+        />
+      </div>
+
       <div id="landing-container">
         <RecipeDetail recipe={selectedRecipe} marketsPromise={markets} />
         <RecipeList onRecipeSelect={(selection) => setRecipe(selection)} recipes={recipes} />

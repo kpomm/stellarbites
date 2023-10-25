@@ -87,15 +87,13 @@ body, html {
   }
 
   #dropdown {
-    position: fixed;
     font-size: 1rem;
     border: solid 2px $dark-color;
     border-bottom: solid 5px $dark-color;
     border-radius: 3px;
     color: $dark-color;
-    top: 10vh;
     height: 5vh;
-    right: 40%;
+    margin-left: 10%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -108,10 +106,15 @@ body, html {
     color: blue;
   }
 
-  #search-bar {
+  #header-stuff {
     position: fixed;
     top: 10vh;
     left: 5%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  #search-bar {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -132,7 +135,7 @@ body, html {
     border-bottom: solid 5px $dark-color;
     background: $accent-color;
     height: 4vh;
-    width: 34vw;
+    width: 30vw;
 
     color: #322E60;
     font-family: 'Nunito', sans-serif;
