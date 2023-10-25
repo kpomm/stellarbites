@@ -6,6 +6,15 @@ The motivation behind this project is to use multiple APIs in a way that can sol
 
 There is additional functionality with Farmer's Market New York API, where I can suggest to the user nearby Farmer's Markets where they might obtain fresh ingredients for their seasonal recipes. Currently, the location is set to NYC (where I am ha!) but my future plans with the project are to find a more widespread API that can cover more locations than just New York. However, for now it is a great tool for me and many others to use while in the city this fall, or next summer! 
 
+## Components 
+
+Main App
+Top bar 
+Search bar
+Recipe List
+Recipe List Item 
+Recipe Detail 
+
 ## Specs
 
 I created this app with React.js and Vite. I used SASS styling and axios for my API calls. 
