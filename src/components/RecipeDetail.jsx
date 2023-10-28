@@ -64,7 +64,7 @@ function RecipeDetail({ recipe, marketsPromise }) {
             </div>
             <div>
               <h4>Source: {' '}
-                <a href={recipe.sourceUrl}>{recipe.sourceName}</a>
+                <a href={recipe.sourceUrl} target="_blank" rel="noopener noreferrer">{recipe.sourceName}</a>
               </h4>
             </div>
           </div>
